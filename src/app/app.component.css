@@ -1,0 +1,29 @@
+*{
+    color: rgb(255, 255, 255);
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    font-family:sans-serif;
+}
+
+#Resultados{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 27px;
+    text-shadow: 0px 4px 4px rgb(102, 3, 194);
+    font-weight: bold;
+}
+
+#Resultados div{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#Resultados div img{
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}
+
