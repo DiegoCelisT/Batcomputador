@@ -19,7 +19,7 @@ export class HeroesService {
     // console.log (pesquisa)
 
     // return this.httpheroes.get ('https://gateway.marvel.com/v1/public/characters?ts=1&apikey='+this.api_key+'&hash='+this.hash);
-    return this.httpheroes.get ('https://superheroapi.com/api/10158614033284024/3');
+    return this.httpheroes.get ('https://superheroapi.com/api/10158614033284024/'+pesquisa);
 
   }
 
