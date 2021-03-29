@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GiphyService } from './giphy.service';
+import { HeroesService } from './heroes.service';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,19 @@ import { GiphyService } from './giphy.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'exercicio03';
+  title = 'SecretInvasion';
 
   resultados: any = {};
   Home: boolean = true;
-
-  constructor (private GiphyServ: GiphyService) {}
+  
+  constructor (private HeroServ: HeroesService) {}
 
   onSubmit (BUSCA){
-    this.GiphyServ.getGIFS(BUSCA.form.value.palavras_chave)
+    this.HeroServ.getHEROES(BUSCA.form.value.palavras_chave)
     .subscribe(resultados => {
-      // console.log (resultados);
       this.resultados = resultados;
       this.Home = false;
+      console.log(resultados);
     })
   }
   
