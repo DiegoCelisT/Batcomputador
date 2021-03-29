@@ -1,21 +1,33 @@
 <article id="Busca" *ngIf="Home == true">
-  <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+  <!-- <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
 			<div>
         <p>Um número de 1 a 731</p>
 				<input type="text" name="palavras_chave" required ngModel placeholder="1-731"> 
 			</div>
 			<button type="submit">BUSCAR</button>
-  </form>
+  </form> -->
+  <button (click)="Bats()"><img src="https://i.pinimg.com/originals/4e/ce/1b/4ece1b28f3a4e042a3e6ca5c991e2199.png" width="200"></button>
+  <button (click)="Supes()"><img src="https://static.wikia.nocookie.net/dccomics/images/a/a5/Superman_Vol_5_1_Textless.jpg/revision/latest?cb=20200421194020&path-prefix=pt" width="200"></button>
+  <button (click)="Wondie()"><img src="https://i.pinimg.com/originals/f8/4d/2e/f84d2e345ca7a8e7148b317a665cd3df.jpg" width="200"></button>
 </article>
+
 
 <article id = "Resultados" *ngIf="Home == false">
   <button id="buttonHome"  type="button" (click)="limpar ()">
-  Buscar mais!
+  Atrás!
   </button>
   <h1>Resultados</h1>    
   <div>
-    <p> {{ resultados.name }} </p>
+    
     <img [src]="resultados.image.url">
+    <h2> {{ resultados.name }} </h2>
+    <h3> Estatísticas </h3>
+    <p> Combate: {{ resultados.powerstats.combat }} </p>
+    <p> Dureza: {{ resultados.powerstats.durability }} </p>
+    <p> Inteligência: {{ resultados.powerstats.intelligence }} </p>
+    <p> Poder: {{ resultados.powerstats.power }} </p>
+    <p> Velocidade: {{ resultados.powerstats.speed }} </p>
+    <p> Força: {{ resultados.powerstats.strength }} </p>
     
     <!-- <img *ngFor="let i of resultados.data" [src]="i.images.fixed_width.url"> -->
   </div>    

@@ -12,18 +12,44 @@ export class AppComponent {
 
   resultados: any = {};
   Home: boolean = true;
+  // Superman: any = 644;
   
   constructor (private HeroServ: HeroesService) {}
 
-  onSubmit (BUSCA){
-    this.HeroServ.getHEROES(BUSCA.form.value.palavras_chave)
+  // ngOnInit (){
+  //   this.HeroServ.getHEROES(70)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = true;
+  //     console.log(resultados);
+  //   })
+  // }
+
+  Supes (){
+    this.HeroServ.getHEROES(644)
     .subscribe(resultados => {
       this.resultados = resultados;
       this.Home = false;
-      console.log(resultados);
+    })
+  }
+
+  Bats (){
+    this.HeroServ.getHEROES(70)
+    .subscribe(resultados => {
+      this.resultados = resultados;
+      this.Home = false;
     })
   }
   
+  Wondie (){
+    this.HeroServ.getHEROES(720)
+    .subscribe(resultados => {
+      this.resultados = resultados;
+      this.Home = false;
+    })
+  }
+
+
   limpar (){
     this.resultados = [];
     this.Home = true;
