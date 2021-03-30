@@ -3,6 +3,7 @@
     background-image: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-family:sans-serif;
 }
 
