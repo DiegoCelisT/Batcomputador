@@ -6,9 +6,13 @@
 			</div>
 			<button type="submit">BUSCAR</button>
   </form> -->
-  <button (click)="Bats()"><img src="https://i.pinimg.com/originals/4e/ce/1b/4ece1b28f3a4e042a3e6ca5c991e2199.png" width="200"></button>
-  <button (click)="Supes()"><img src="https://static.wikia.nocookie.net/dccomics/images/a/a5/Superman_Vol_5_1_Textless.jpg/revision/latest?cb=20200421194020&path-prefix=pt" width="200"></button>
-  <button (click)="Wondie()"><img src="https://i.pinimg.com/originals/f8/4d/2e/f84d2e345ca7a8e7148b317a665cd3df.jpg" width="200"></button>
+  <button (click)="Heroes(70)"><img src="https://i.pinimg.com/originals/4e/ce/1b/4ece1b28f3a4e042a3e6ca5c991e2199.png" width="200"></button>
+  <button (click)="Heroes(644)"><img src="https://static.wikia.nocookie.net/dccomics/images/a/a5/Superman_Vol_5_1_Textless.jpg/revision/latest?cb=20200421194020&path-prefix=pt" width="200"></button>
+  <button (click)="Heroes(720)"><img src="https://i.pinimg.com/originals/f8/4d/2e/f84d2e345ca7a8e7148b317a665cd3df.jpg" width="200"></button>
+  <button (click)="Heroes(265)"><img src="https://www.wallpapertip.com/wmimgs/16-163847_flash-art-dc-comics.jpg" width="200"></button>
+  <button (click)="Heroes(306)"><img src="https://static.wikia.nocookie.net/marvel_dc/images/8/83/Hal_Jordan_and_the_Green_Lantern_Corps_Vol_1_45_Textless_Variant.jpg/revision/latest?cb=20180523193425" width="200"></button>
+  <button (click)="Heroes(156)"><img src="https://static.wikia.nocookie.net/marvel_dc/images/6/61/Shazam%21_Vol_3_1_Textless_Variant.jpg/revision/latest?cb=20181205234924" width="200"></button>
+  <button (click)="Heroes(432)"><img src="https://static.wikia.nocookie.net/liga-da-justica-fanfiction/images/2/2c/J%27onn_J%27onzz.jpg/revision/latest/scale-to-width-down/340?cb=20180823052051&path-prefix=pt-br" width="200"></button>
 </article>
 
 
@@ -21,6 +25,11 @@
     
     <img [src]="resultados.image.url">
     <h2> {{ resultados.name }} </h2>
+    <h3> ({{ resultados.biography["full-name"] }}) </h3> <!--como tem uma barra "-"", tem que se usar essa sintaxe, tirando o ponto ["pal-avra"]-->
+    <h3>  </h3>
+    <p> Raça: {{ resultados.appearance.race }}</p>
+    <p> Altura: {{ resultados.appearance.height[1] }}</p>
+    <p> Peso: {{ resultados.appearance.weight[1] }}</p>
     <h3> Estatísticas </h3>
     <p> Combate: {{ resultados.powerstats.combat }} </p>
     <p> Dureza: {{ resultados.powerstats.durability }} </p>

@@ -16,39 +16,77 @@ export class AppComponent {
   
   constructor (private HeroServ: HeroesService) {}
 
-  // ngOnInit (){
-  //   this.HeroServ.getHEROES(70)
+  Heroes (valor){
+    this.HeroServ.getHEROES(valor)
+    .subscribe(resultados => {
+      this.resultados = resultados;
+      this.Home = false;
+      console.log(resultados);
+    })
+  }
+
+  // Supes (){
+  //   this.HeroServ.getHEROES(644)
   //   .subscribe(resultados => {
   //     this.resultados = resultados;
-  //     this.Home = true;
-  //     console.log(resultados);
+  //     this.Home = false;
+  //     console.log(resultados)
   //   })
   // }
 
-  Supes (){
-    this.HeroServ.getHEROES(644)
-    .subscribe(resultados => {
-      this.resultados = resultados;
-      this.Home = false;
-    })
-  }
-
-  Bats (){
-    this.HeroServ.getHEROES(70)
-    .subscribe(resultados => {
-      this.resultados = resultados;
-      this.Home = false;
-    })
-  }
+  // Bats (){
+  //   this.HeroServ.getHEROES(70)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados)
+  //   })
+  // }
   
-  Wondie (){
-    this.HeroServ.getHEROES(720)
-    .subscribe(resultados => {
-      this.resultados = resultados;
-      this.Home = false;
-    })
-  }
+  // Wondy (){
+  //   this.HeroServ.getHEROES(720)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados)
+  //   })
+  // }
 
+  // Flash (){
+  //   this.HeroServ.getHEROES(265)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados)
+  //   })
+  // }
+
+  // GL_Hal (){
+  //   this.HeroServ.getHEROES(306)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados)
+  //   })
+  // }
+
+  // Shazam (){
+  //   this.HeroServ.getHEROES(156)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados)
+  //   })
+  // }
+
+  // MartianManhunter (){
+  //   this.HeroServ.getHEROES(432)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados)
+  //   })
+  // }
 
   limpar (){
     this.resultados = [];
