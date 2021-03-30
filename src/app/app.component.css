@@ -19,12 +19,30 @@
 #Resultados div{
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+#Resultados div div{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+}
+
+#Resultados div div p{
+    margin: 5px;
 }
 
 #Resultados div img{
     padding: 20px;
     width: 200px;
     /* height: 200px; */
+}
+
+#Estatisticas{
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: aqua; */
 }
 

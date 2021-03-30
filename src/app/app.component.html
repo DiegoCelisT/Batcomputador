@@ -7,6 +7,7 @@
 			<button type="submit">BUSCAR</button>
   </form> -->
   <div>
+    <!-- <h1>Baticomputadora</h1> -->
     <h1>Conheça o incrível universo DC e seus personagens</h1>
   </div>
   <div>
@@ -42,24 +43,36 @@
   <button id="buttonHome"  type="button" (click)="limpar ()">
   Atrás!
   </button>
-  <h1>Resultados</h1>    
+  <h1>Resultados</h1>
   <div>
+    <div>
+      <h2> {{ resultados.name }} </h2>
+      <img [src]="resultados.image.url" width="400">
+    </div>
+    <div>
+      <p>Nome real:</p>
+      <p> {{ resultados.biography["full-name"] }} </p> <!--como tem uma barra "-"", tem que se usar essa sintaxe, tirando o ponto ["pal-avra"]-->
+      <p> Raça: {{ resultados.appearance.race }}</p>
+      <p> Altura: {{ resultados.appearance.height[1] }}</p>
+      <p> Peso: {{ resultados.appearance.weight[1] }}</p>
+    </div>
+    <div id="Estatisticas">
+      <h3> Estatísticas </h3>
+      <p> Combate: {{ resultados.powerstats.combat }} </p>
+      <p> Dureza: {{ resultados.powerstats.durability }} </p>
+      <p> Inteligência: {{ resultados.powerstats.intelligence }} </p>
+      <p> Poder: {{ resultados.powerstats.power }} </p>
+      <p> Velocidade: {{ resultados.powerstats.speed }} </p>
+      <p> Força: {{ resultados.powerstats.strength }} </p>
+    </div>
     
-    <img [src]="resultados.image.url">
-    <h2> {{ resultados.name }} </h2>
-    <h3> ({{ resultados.biography["full-name"] }}) </h3> <!--como tem uma barra "-"", tem que se usar essa sintaxe, tirando o ponto ["pal-avra"]-->
-    <h3>  </h3>
-    <p> Raça: {{ resultados.appearance.race }}</p>
-    <p> Altura: {{ resultados.appearance.height[1] }}</p>
-    <p> Peso: {{ resultados.appearance.weight[1] }}</p>
-    <h3> Estatísticas </h3>
-    <p> Combate: {{ resultados.powerstats.combat }} </p>
-    <p> Dureza: {{ resultados.powerstats.durability }} </p>
-    <p> Inteligência: {{ resultados.powerstats.intelligence }} </p>
-    <p> Poder: {{ resultados.powerstats.power }} </p>
-    <p> Velocidade: {{ resultados.powerstats.speed }} </p>
-    <p> Força: {{ resultados.powerstats.strength }} </p>
+  
+  </div>
+       
+    
+    
+    
     
     <!-- <img *ngFor="let i of resultados.data" [src]="i.images.fixed_width.url"> -->
-  </div>    
+     
 </article>
