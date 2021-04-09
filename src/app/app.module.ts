@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { ComponentesModule} from './componentes/componentes.module';
+import { routing } from './app-routing.module'
+
+//Adição da requisição HTTP:
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -11,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ComponentesModule,
+    routing,
     HttpClientModule
   ],
   providers: [],

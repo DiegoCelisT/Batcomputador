@@ -3,47 +3,14 @@
     background-image: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    font-family:sans-serif;
-}
-
-#Resultados{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-size: 27px;
-    text-shadow: 0px 4px 4px rgb(102, 3, 194);
-    font-weight: bold;
-}
-
-#Resultados div{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-#Resultados div div{
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-content: center;
-    margin: 0;
-}
-
-#Resultados div div p{
-    margin: 5px;
-}
-
-#Resultados div img{
-    /* padding: 20px; */
-    margin: 0px;
-    width: 200px;
-    /* height: 200px; */
-}
-
-#Estatisticas{
     flex-direction: column;
+    font-family:sans-serif;
     flex-wrap: wrap;
-    /* background-color: aqua; */
+    margin: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+div h1, div h2{
+    margin: 10px 0px 10px 0px;
+}

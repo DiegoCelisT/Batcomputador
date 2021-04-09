@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeroesService } from './heroes.service';
 
 @Component({
   selector: 'app-root',
@@ -9,19 +8,19 @@ import { HeroesService } from './heroes.service';
 export class AppComponent {
   title = 'Batcomputadora';
 
-  resultados: any = {};
-  Home: boolean = true;
+  // resultados: any = {};
+  // Home: boolean = true;
   
-  constructor (private HeroServ: HeroesService) {}
+  // constructor (private HeroServ: HeroesService) {}
 
-  Heroes (valor){
-    this.HeroServ.getHEROES(valor)
-    .subscribe(resultados => {
-      this.resultados = resultados;
-      this.Home = false;
-      console.log(resultados);
-    })
-  }
+  // Heroes (valor){
+  //   this.HeroServ.getHEROES(valor)
+  //   .subscribe(resultados => {
+  //     this.resultados = resultados;
+  //     this.Home = false;
+  //     console.log(resultados);
+  //   })
+  // }
 
   // Supes (){
   //   this.HeroServ.getHEROES(644)
@@ -41,9 +40,9 @@ export class AppComponent {
   //   })
   // }
 
-  limpar (){
-    this.resultados = [];
-    this.Home = true;
-  }
+  // limpar (){
+  //   this.resultados = [];
+  //   this.Home = true;
+  // }
 
 }

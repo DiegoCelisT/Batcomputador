@@ -1,0 +1,80 @@
+<article id="Busca" *ngIf="Home == true">
+  <!-- <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+            <div>
+        <p>Um número de 1 a 731</p>
+                <input type="text" name="palavras_chave" required ngModel placeholder="1-731"> 
+            </div>
+            <button type="submit">BUSCAR</button>
+  </form> -->
+ 
+  <div>
+    <h1>Galeria de Super-herois</h1>
+    
+  </div>
+  
+  <aside>
+    <a href="">Home</a>
+  </aside>
+  
+  <div>
+    <button (click)="Heroes(70)"><img src="https://i.postimg.cc/dtkw2TqT/001-Batman.png" width="200" alt="Batman"></button>
+    <button (click)="Heroes(644)"><img src="https://i.postimg.cc/9XxQthZs/002-Superman.jpg" width="200" alt="Superman"></button>
+    <button (click)="Heroes(720)"><img src="https://i.postimg.cc/FzKs5W5P/003-Wondie.jpg" width="200" alt="Wonder Woman"></button>
+    <button (click)="Heroes(265)"><img src="https://i.postimg.cc/GpJcBwb7/004-Flash.jpg" width="200" alt="Flash"></button>
+    <button (click)="Heroes(306)"><img src="https://i.postimg.cc/T3b265FX/005-Green-Lantern-Hal.jpg" width="200" alt="Green Lantern - Hal Jordan"></button>
+    <button (click)="Heroes(156)"><img src="https://i.postimg.cc/bNWYW96T/006-Shazam.jpg" width="200" alt="Shazam!"></button>
+    <button (click)="Heroes(432)"><img src="https://i.postimg.cc/1XYR9Gyy/007-Martian-Manhunter.jpg" width="200" alt="Martian Manhunter"></button>
+    <button (click)="Heroes(28)"><img src="https://i.postimg.cc/kXBXTpyG/008-Animal-Man.jpg" width="200" alt="Animal Man"></button>
+    <button (click)="Heroes(730)"><img src="https://i.postimg.cc/yxWBrDct/009-Zatanna.jpg" width="200" alt="Zatanna"></button>
+    <button (click)="Heroes(368)"><img src="https://i.postimg.cc/bvjyNNfS/010-Green-Lantern-Jhon-Stewart.jpg" width="200" alt="Green Lantern - Jhon Stewart"></button>
+    <button (click)="Heroes(367)"><img src="https://i.postimg.cc/d0vFcHG8/011-Constantine.jpg" width="200" alt="Constantine"></button>
+    <button (click)="Heroes(491)"><img src="https://i.postimg.cc/XNDnBg0b/012-Nightwing.jpg" width="200" alt="Nightwing"></button>
+    <button (click)="Heroes(53)"><img src="https://i.postimg.cc/VLx1DL6Z/013-Atom.jpg" width="200" alt="Atom"></button>
+    <button (click)="Heroes(97)"><img src="https://i.postimg.cc/tTBp53ZF/014-Black-Cannary.jpg" width="200" alt="Black Canary"></button>
+    <button (click)="Heroes(298)"><img src="https://i.postimg.cc/tg5jq3z8/015-Green-Arrow.jpg" width="200" alt="Green Arrow"></button>
+    <button (click)="Heroes(316)"><img src="https://i.postimg.cc/wBGdR6Sk/016-Hawkman.jpg" width="200" alt="Hawkman"></button>
+    <button (click)="Heroes(315)"><img src="https://i.postimg.cc/1t3Zf8CX/017-Hawkgirl.jpg" width="200" alt="Hawgirl"></button>
+    <button (click)="Heroes(699)"><img src="https://i.postimg.cc/Mp1w42f6/018-Vixen.jpg" width="200" alt="Vixen"></button>
+    <button (click)="Heroes(535)"><img src="https://i.postimg.cc/Cx4h5phv/019-Question.jpg" width="200" alt="Question"></button>
+    <button (click)="Heroes(63)"><img src="https://i.postimg.cc/PJdKtD2V/020-Batgirl-Barbara-Gordon.jpg" width="200" alt="Batgirl - Barbara Gordon"></button>
+    <button (click)="Heroes(66)"><img src="https://i.postimg.cc/hPPM69Jf/021-Batgirl-Cassandra-Cain.jpg" width="200" alt="Batgirl - Cassandra Cain"></button>
+    <button (click)="Heroes(542)"><img src="https://i.postimg.cc/cJ6pSprt/022-Raven.jpg" width="200" alt="Raven"></button>
+    <button (click)="Heroes(551)"><img src="https://i.postimg.cc/BvydQmKY/023-Red-Tornado.jpg" width="200" alt="Red Tornado"></button>
+    <button (click)="Heroes(194)"><img src="https://i.postimg.cc/Qthc531H/024-Cyborg.jpg" width="200" alt="Cyborg"></button>
+  </div>
+</article>
+
+
+<article id = "Resultados" *ngIf="Home == false">
+  <button id="buttonHome"  type="button" (click)="limpar ()">
+  Atrás!
+  </button>
+  <h1>Resultados</h1>
+  <div>
+    <div>
+      <h2> {{ resultados.name }} </h2>
+      <img [src]="resultados.image.url" width="400">
+    </div>
+    <div>
+      <p>Nome real:</p>
+      <p> {{ resultados.biography["full-name"] }} </p> <!--como tem uma barra "-"", tem que se usar essa sintaxe, tirando o ponto ["pal-avra"]-->
+      <p> Raça: {{ resultados.appearance.race }}</p>
+      <p> Altura: {{ resultados.appearance.height[1] }}</p>
+      <p> Peso: {{ resultados.appearance.weight[1] }}</p>
+    </div>
+    <div id="Estatisticas">
+      <h3> Estatísticas </h3>
+      <p> Combate: {{ resultados.powerstats.combat }} </p>
+      <p> Dureza: {{ resultados.powerstats.durability }} </p>
+      <p> Inteligência: {{ resultados.powerstats.intelligence }} </p>
+      <p> Poder: {{ resultados.powerstats.power }} </p>
+      <p> Velocidade: {{ resultados.powerstats.speed }} </p>
+      <p> Força: {{ resultados.powerstats.strength }} </p>
+    </div>
+    
+  
+  </div>
+       
+    <!-- <img *ngFor="let i of resultados.data" [src]="i.images.fixed_width.url"> -->
+     
+</article>  
