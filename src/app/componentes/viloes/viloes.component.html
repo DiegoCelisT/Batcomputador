@@ -1,4 +1,72 @@
-<a href="">Home</a>
-<div>
-  <h1>Galeria de Super-vilões</h1>
-</div>
+<article id="Busca" *ngIf="Home == true">
+
+    <div>
+      <h1>Galeria de Super-vilões</h1>
+    </div>
+    
+    <aside>
+      <a href="">Home</a>
+    </aside>
+    
+    <div>
+      <button (click)="Villains(405)"><img src="https://i.postimg.cc/L60nmF8z/001-Lex-Luthor.jpg" width="200" alt="Luthor"></button>
+      <button (click)="Villains(216)"><img src="https://i.postimg.cc/Znw091Fz/002-Deathstroke.jpg" width="200" alt="Deathstroke"></button>
+      <button (click)="Villains(204)"><img src="https://i.postimg.cc/Wb66b3JQ/003b-Darkseid.jpg" width="200" alt="Darkseid"></button>
+      <button (click)="Villains(675)"><img src="https://i.postimg.cc/bvdQT9Fh/004-Trigon.png" width="200" alt="Trigon"></button>
+      <button (click)="Villains(413)"><img src="https://i.postimg.cc/P5SWYRyy/005-Lobo.jpg" width="200" alt="Lobo"></button>
+      <button (click)="Villains(601)"><img src="https://i.postimg.cc/Jzr3yLNt/006-Sinestro.jpg" width="200" alt="Sinestro"></button>
+
+      <button (click)="Villains(95)"><img src="https://i.postimg.cc/kXdzp2mZ/007-Black-Adam.jpg" width="200" alt="Black Adam"></button>
+      <button (click)="Villains(642)"><img src="https://i.postimg.cc/qBKWw89y/008-Superboy-Prime.jpg" width="200" alt="Superboy Prime"></button>
+      <button (click)="Villains(242)"><img src="https://i.postimg.cc/PfDHFLLs/015-Enchantress.jpg" width="200" alt="Enchantress"></button>
+      <button (click)="Villains(32)"><img src="https://i.postimg.cc/g2g7j4ZF/010-Anti-Monitor.jpg" width="200" alt="Anti-Monitor"></button>
+      <button (click)="Villains(278)"><img src="https://i.postimg.cc/vmDNV9r1/011-General-Zod.jpg" width="200" alt="General Zod"></button>
+      <button (click)="Villains(230)"><img src="https://i.postimg.cc/c4M2yd1J/012-Doomsday.jpg" width="200" alt="Doomsday"></button>
+
+      <button (click)="Villains(136)"><img src="https://i.postimg.cc/SRcpX50N/013-Brainiac.jpg" width="200" alt="Brainiac"></button>
+      <button (click)="Villains(528)"><img src="https://i.postimg.cc/jdQbtGQM/014-Professor-Zoom.png" width="200" alt="Professor Zoom"></button>
+      <button (click)="Villains(195)"><img src="https://i.postimg.cc/mgLqTKhy/009-Cyborg-Superman.jpg" width="200" alt="Cyborg Superman"></button>
+      <button (click)="Villains(370)"><img src="https://i.postimg.cc/sgRtLKk5/016-Joker.jpg" width="200" alt="Joker"></button>
+      <button (click)="Villains(387)"><img src="https://i.postimg.cc/wvPrQk5y/017-Killer-Frost.jpg" width="200" alt="Killer Frost"></button>
+      <button (click)="Villains(390)"><img src="https://i.postimg.cc/7P58J51J/018-King-Shark.jpg" width="200" alt="King Shark"></button>
+      
+      <button (click)="Villains(522)"><img src="https://i.postimg.cc/gkhC41TY/019-Poison-Ivy.jpg" width="200" alt="Poison Ivy"></button>
+      <button (click)="Villains(445)"><img src="https://i.postimg.cc/wMmGfsFW/020-Metallo.png" width="200" alt="Metallo"></button>
+      <button (click)="Villains(253)"><img src="https://i.postimg.cc/K8rdhBbw/021-Faora.jpg" width="200" alt="Faora"></button>
+      <button (click)="Villains(427)"><img src="https://i.postimg.cc/xTSQr0Hk/022-Man-Bat.jpg" width="200" alt="Man-Bat"></button>
+      <button (click)="Villains(538)"><img src="https://i.postimg.cc/g0gQnpnK/023-Ra-s-Al-Gul.jpg" width="200" alt="Ra's Al Ghul"></button>
+      <button (click)="Villains(284)"><img src="https://i.postimg.cc/W1NP3X5T/024-Giganta.jpg" width="200" alt="Giganta"></button>
+
+    </div>
+  </article>
+  
+  <article id = "Resultados" *ngIf="Home == false">
+    <button id="buttonHome"  type="button" (click)="limpar ()">
+    Atrás!
+    </button>
+    <h1>Resultados</h1>
+    <div>
+      <div>
+        <h2> {{ resultados.name }} </h2>
+        <img [src]="resultados.image.url" width="400">
+      </div>
+      <div>
+        <p>Nome real:</p>
+        <p> {{ resultados.biography["full-name"] }} </p> <!--como tem uma barra "-"", tem que se usar essa sintaxe, tirando o ponto ["pal-avra"]-->
+        <p> Raça: {{ resultados.appearance.race }}</p>
+        <p> Altura: {{ resultados.appearance.height[1] }}</p>
+        <p> Peso: {{ resultados.appearance.weight[1] }}</p>
+      </div>
+      <div id="Estatisticas">
+        <h3> Estatísticas </h3>
+        <p> Combate: {{ resultados.powerstats.combat }} </p>
+        <p> Dureza: {{ resultados.powerstats.durability }} </p>
+        <p> Inteligência: {{ resultados.powerstats.intelligence }} </p>
+        <p> Poder: {{ resultados.powerstats.power }} </p>
+        <p> Velocidade: {{ resultados.powerstats.speed }} </p>
+        <p> Força: {{ resultados.powerstats.strength }} </p>
+      </div>
+      
+    </div>
+
+  </article>  

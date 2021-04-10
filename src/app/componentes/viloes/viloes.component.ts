@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VillainsService } from '../../services/villains.service'
 
 @Component({
   selector: 'app-viloes',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViloesComponent implements OnInit {
 
-  constructor() { }
+  resultados: any = {};
+  Home: boolean = true;
 
+  constructor(private VillainServ: VillainsService) { }
+
+  Villains (valor){
+    this.VillainServ.getVILLAINS(valor)
+    .subscribe(resultados => {
+      this.resultados = resultados;
+      this.Home = false;
+      console.log(resultados);
+    })
+  }
+
+  limpar (){
+    this.resultados = [];
+    this.Home = true;
+  }
+  
   ngOnInit(): void {
   }
 
 }
+
+
+
+
+
