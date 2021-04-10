@@ -38,7 +38,7 @@ export class HeroisComponent implements OnInit {
   //     this.Home = false;
   //     console.log(resultados)
   //   })
-  // }
+  // } //Powered by DiegoCelisT
 
   limpar (){
     this.resultados = [];
