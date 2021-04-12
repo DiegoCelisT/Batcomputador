@@ -7,9 +7,28 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
 }
 
-div h1, div h2{
-    margin: 10px 0px 10px 0px;
+@font-face {
+    font-family: 'BatFont';
+    src: url('../assets/BatFont.ttf')
+}
+
+div h1{
+    /* margin: 10px 0px 10px 0px; */
+    padding: 25px;
+    font-size: 50px;
+    /* -webkit-text-stroke: 1px black; */
+    font-family: 'BatFont';
+    text-shadow: 0.2em 0.1em 0.1em black;
+    background-image: url('../assets/Electric GIF.gif');
+    background-size: 170px;
+    
+    /* text-shadow: 0.2em 0.5em 0.1em #600,
+        -0.3em 0.1em 0.1em #060,
+        0.4em -0.3em 0.1em #006 */
+    /* box-shadow: 0px 0px 15px 15px #ec731e; */
+    /* -webkit-box-shadow: 0px 0px 15px 15px #ec731e; */
+    /* color: transparent;  */
 }
