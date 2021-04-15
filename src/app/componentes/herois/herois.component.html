@@ -9,11 +9,12 @@
  
   <div>
     <h1>Galeria de Super-herois</h1>
-    
   </div>
   
   <aside>
-    <a href="">Home</a>
+    <button class='Voltar'>
+      <a href=""><img src="../../../../assets/Back5.png" alt="Home"></a>
+    </button>
   </aside>
   
   <div>
@@ -46,9 +47,9 @@
 
 
 <article id = "Resultados" *ngIf="Home == false">
-  <button id="buttonHome"  type="button" (click)="limpar ()">
-  Atrás!
-  </button>
+  <aside>
+    <button class="Voltar" id="buttonHome"  type="button" (click)="limpar ()"><img src="../../../../assets/Back5.png" alt="Voltar"></button>
+  </aside>
   <h1>Resultados</h1>
   <div>
     <div>
