@@ -11,7 +11,12 @@
 
 @font-face {
     font-family: 'BatFont';
-    src: url('../assets/BatFont.ttf')
+    src: url('../assets/BatFont.ttf');
+}
+
+@font-face {
+    font-family: 'Cyberpunks';
+    src: url('../assets/Cyberpunks.ttf')
 }
 
 div h1{
@@ -23,6 +28,18 @@ div h1{
     background-size: 170px;
 }
 
+
+footer{
+    background-image: url('/assets/Binary4.gif');
+    background-size: 120px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin: 1vw 32vw 1vw 32vw;
+    font-family: Cyberpunks;
+    -webkit-text-stroke: 2.4px black;
+}
+
 @media (max-width: 600px){
     
     div h1{
@@ -30,3 +47,4 @@ div h1{
         text-align: center;
     }
 }
+
