@@ -31,13 +31,25 @@ div h1{
 
 footer{
     background-image: url('/assets/Binary4.gif');
-    background-size: 120px;
-    font-size: 30px;
+    background-size: 110px;
+    margin: 1vw 32vw 1vw 32vw;
+}
+
+footer a:hover{
+    color: black;
+    -webkit-text-stroke: 1.4px white;
+    background-image: url('/assets/Electric GIF.gif');
+    background-size: 330px;
+}
+
+a{
+    font-size: 32px;
     text-align: center;
     color: white;
-    margin: 1vw 32vw 1vw 32vw;
     font-family: Cyberpunks;
     -webkit-text-stroke: 2.4px black;
+    text-decoration: none;
+    padding: 5px;
 }
 
 @media (max-width: 600px){

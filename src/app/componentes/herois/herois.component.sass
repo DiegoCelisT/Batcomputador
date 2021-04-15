@@ -1,11 +1,20 @@
-*
+@font-face 
+    font-family: 'Cyberpunks'
+    src: url('../../../assets/Cyberpunks.ttf')
+
+* 
     color: rgb(255, 255, 255)
     background-image: none
     display: flex
     justify-content: center
     flex-wrap: wrap
     margin: 0px
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    // font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Cyberpunks'
+    -webkit-text-stroke: 1px black
+    font-size: 40px
+    text-shadow: 0px 4px 4px rgb(102, 3, 194)
+    font-weight: bold
 
 div h1
     margin: 10px 0px 10px 0px
@@ -48,9 +57,32 @@ div h1
     flex-direction: column
     flex-wrap: wrap
     /* background-color: aqua; */
+    
+button
+    background-image: url('../../../assets/Binary2.gif')
+    background-size: 200px
+    // background-image: url('../../../assets/Electri GIF3.gif')
+    // background-size: 350px
+    border-width: 4px
+    // border-color: rgb(118, 82, 134)
+    padding: 0px
+button:hover
+    background-image: url('../../../assets/Binary3.gif')
+    background-size: 500px
+
+img
+    align-self: center
+    padding: 6px
+//Efeito de inversão de cor (IRADO!!)
+img:hover
+    -webkit-filter: invert(100%)
+    filter: invert(100%)
+    // box-shadow: 0px 0px 25px rgb(60, 255, 0)
 
 .Voltar
-    background-image: url('../../../assets/Binary2.gif')
+    // background-image: url('../../../assets/Binary3.gif')
+    background-image: none
+    box-shadow: 0px 0px 15px rgb(115, 255, 255)
     background-size: 250px
     align-self: center
     position: fixed
@@ -61,7 +93,11 @@ div h1
     border-style: none
     img
         width: 60px
+        padding: 0px
 
 .Voltar:hover
+    background-image: none
     background-image: url('../../../assets/Binary3.gif')
-    box-shadow: 0px 0px 15px rgb(6, 251, 253)
+    // box-shadow: 0px 0px 15px rgb(115, 255, 255)
+    box-shadow: 0px 0px 2px rgb(21, 255, 0)
+    background-size: 300px
