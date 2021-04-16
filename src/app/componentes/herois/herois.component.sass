@@ -18,46 +18,73 @@
 
 div h1
     margin: 10px 0px 10px 0px
+    font-size: 65px
+    text-align: center
+
+
 
 #Resultados
     display: flex
     flex-direction: column
     flex-wrap: nowrap
-    font-size: 27px
+    // font-size: 27px
     text-shadow: 0px 4px 4px rgb(102, 3, 194)
     font-weight: bold
-
-
-#Resultados div
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-evenly
-
-
-#Resultados div div
-    flex-direction: column
-    flex-wrap: wrap
-    justify-content: center
-    align-content: center
-    margin: 0
-
-
-#Resultados div div p
-    margin: 5px
-
-
-#Resultados div img
-    /* padding: 20px; */
-    margin: 0px
-    width: 200px
-    /* height: 200px; */
-
+    h1
+        font-size: 80px
+        text-align: center
+        // color: white
+        -webkit-text-stroke: 1.8px black
+        margin: 20px
+    div
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-evenly
+        div:first-child
+            background-color: black
+            background-image: none
+            padding: 0px
+        div
+            flex-direction: column
+            flex-wrap: wrap
+            justify-content: center
+            align-content: center
+            margin-bottom: 30px 
+            // padding: 20px
+            background-image: url('../../../assets/Electri GIF3.gif')
+            background-size: 500px
+            padding: 20px
+            border: solid 10px
+            border-color: black
+            img
+                padding: 0px
+                margin: 0px
+                width: 350px
+            img:hover
+                -webkit-filter: none
+                filter: none
+            p
+                margin: 5px            
+                color: black
+                -webkit-text-stroke: 1px white
 
 #Estatisticas
     flex-direction: column
     flex-wrap: wrap
     /* background-color: aqua; */
-    
+    h3
+        color: black
+        font-size: 45px
+        -webkit-text-stroke: 1px white
+
+.Subtitulo
+    text-decoration: underline
+    text-decoration-color: white
+    color: white
+    -webkit-text-stroke: 1.5px black
+
+
+
 button
     background-image: url('../../../assets/Binary2.gif')
     background-size: 200px
@@ -73,6 +100,7 @@ button:hover
 img
     align-self: center
     padding: 6px
+
 //Efeito de inversão de cor (IRADO!!)
 img:hover
     -webkit-filter: invert(100%)
