@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SecretInvasion": {
+    "batcomputador": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SecretInvasion",
+            "outputPath": "dist/batcomputador",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SecretInvasion:build"
+            "browserTarget": "batcomputador:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SecretInvasion:build:production"
+              "browserTarget": "batcomputador:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SecretInvasion:build"
+            "browserTarget": "batcomputador:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SecretInvasion:serve"
+            "devServerTarget": "batcomputador:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SecretInvasion:serve:production"
+              "devServerTarget": "batcomputador:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "SecretInvasion"
+  "defaultProject": "batcomputador"
 }
