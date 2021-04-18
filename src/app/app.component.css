@@ -23,7 +23,7 @@ div h1{
     padding: 25px;
     font-size: 50px;
     font-family: 'BatFont';
-    text-shadow: 0.2em 0.1em 0.1em black;
+    text-shadow: 0.1em 0.1em 0.1em rgb(0, 0, 0);
     background-image: url('../assets/Electric GIF.gif');
     background-size: 170px;
 }
@@ -59,4 +59,3 @@ a{
         text-align: center;
     }
 }
-
