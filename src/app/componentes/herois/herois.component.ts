@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service'
+import { HeroeslocalService } from "../../services/heroeslocal.service"
 
 @Component({
   selector: 'app-herois',
@@ -11,8 +12,16 @@ export class HeroisComponent implements OnInit {
   resultados: any = {};
   Home: boolean = true;
 
-  constructor(private HeroServ: HeroesService) { }
+  constructor(private HeroServ: HeroesService, private HeroesLocalServ: HeroeslocalService) { }
 
+  //Dados vindos do serviço local
+  HeroesLocal (valor){
+    this.resultados = this.HeroesLocalServ.getHeroisLocal (valor);
+    this.Home = false;
+    console.log(this.resultados);
+  }
+
+  //Dados vindos do serviço com API externa
   Heroes (valor){
     this.HeroServ.getHEROES(valor)
     .subscribe(resultados => {
@@ -39,6 +48,10 @@ export class HeroisComponent implements OnInit {
   //     console.log(resultados)
   //   })
   // } //Powered by DiegoCelisT
+
+  //Objeto trazido daquele arquivo personagens.json:
+  
+
 
   limpar (){
     this.resultados = [];
