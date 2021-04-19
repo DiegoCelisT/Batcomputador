@@ -10,7 +10,7 @@
   </aside>
   
   <!-- Versão com API (funciona localmente) -->
-  <div>
+  <!-- <div>
     <button (click)="Heroes(70)"><img src="https://i.postimg.cc/dtkw2TqT/001-Batman.png" width="200" alt="Batman"></button>
     <button (click)="Heroes(644)"><img src="https://i.postimg.cc/9XxQthZs/002-Superman.jpg" width="200" alt="Superman"></button>
     <button (click)="Heroes(720)"><img src="https://i.postimg.cc/FzKs5W5P/003-Wondie.jpg" width="200" alt="Wonder Woman"></button>
@@ -35,10 +35,10 @@
     <button (click)="Heroes(542)"><img src="https://i.postimg.cc/cJ6pSprt/022-Raven.jpg" width="200" alt="Raven"></button>
     <button (click)="Heroes(551)"><img src="https://i.postimg.cc/BvydQmKY/023-Red-Tornado.jpg" width="200" alt="Red Tornado"></button>
     <button (click)="Heroes(194)"><img src="https://i.postimg.cc/Qthc531H/024-Cyborg.jpg" width="200" alt="Cyborg"></button>
-  </div>
+  </div> -->
   
 <!-- Versão com serviço (funciona em produção) -->
-  <!-- <div>
+  <div>
     <button (click)="HeroesLocal(0)"><img src="https://i.postimg.cc/dtkw2TqT/001-Batman.png" width="200" alt="Batman"></button>
     <button (click)="HeroesLocal(1)"><img src="https://i.postimg.cc/9XxQthZs/002-Superman.jpg" width="200" alt="Superman"></button>
     <button (click)="HeroesLocal(2)"><img src="https://i.postimg.cc/FzKs5W5P/003-Wondie.jpg" width="200" alt="Wonder Woman"></button>
@@ -63,12 +63,12 @@
     <button (click)="HeroesLocal(21)"><img src="https://i.postimg.cc/cJ6pSprt/022-Raven.jpg" width="200" alt="Raven"></button>
     <button (click)="HeroesLocal(22)"><img src="https://i.postimg.cc/BvydQmKY/023-Red-Tornado.jpg" width="200" alt="Red Tornado"></button>
     <button (click)="HeroesLocal(23)"><img src="https://i.postimg.cc/Qthc531H/024-Cyborg.jpg" width="200" alt="Cyborg"></button>
-  </div> -->
+  </div>
 
 </article>
 
 <article id = "Resultados" *ngIf="Home == false">
-  <h1> {{ resultados.biography["full-name"] }} </h1>
+  <h1> {{ resultados.name }} </h1>
   <div>
     <div>
       <img [src]="resultados.image.url" width="400">

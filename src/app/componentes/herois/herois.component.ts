@@ -18,7 +18,7 @@ export class HeroisComponent implements OnInit {
   HeroesLocal (valor){
     this.resultados = this.HeroesLocalServ.getHeroisLocal (valor);
     this.Home = false;
-    console.log(this.resultados);
+    // console.log(this.resultados);
   }
 
   //Dados vindos do serviço com API externa
@@ -27,7 +27,7 @@ export class HeroisComponent implements OnInit {
     .subscribe(resultados => {
       this.resultados = resultados;
       this.Home = false;
-      console.log(resultados);
+      // console.log(resultados);
     })
   }
 

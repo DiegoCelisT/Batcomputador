@@ -10,7 +10,8 @@
       </button>
     </aside>
     
-    <div>
+    <!-- Consumo de API remota: -->
+    <!-- <div>
       <button (click)="Villains(405)"><img src="https://i.postimg.cc/L60nmF8z/001-Lex-Luthor.jpg" width="200" alt="Luthor"></button>
       <button (click)="Villains(216)"><img src="https://i.postimg.cc/Znw091Fz/002-Deathstroke.jpg" width="200" alt="Deathstroke"></button>
       <button (click)="Villains(204)"><img src="https://i.postimg.cc/Wb66b3JQ/003b-Darkseid.jpg" width="200" alt="Darkseid"></button>
@@ -38,8 +39,39 @@
       <button (click)="Villains(427)"><img src="https://i.postimg.cc/xTSQr0Hk/022-Man-Bat.jpg" width="200" alt="Man-Bat"></button>
       <button (click)="Villains(538)"><img src="https://i.postimg.cc/g0gQnpnK/023-Ra-s-Al-Gul.jpg" width="200" alt="Ra's Al Ghul"></button>
       <button (click)="Villains(284)"><img src="https://i.postimg.cc/W1NP3X5T/024-Giganta.jpg" width="200" alt="Giganta"></button>
+    </div> -->
 
+    <!-- Consumo de Serviço local: -->
+    <div>
+      <button (click)="VillainsLocal(0)"><img src="https://i.postimg.cc/L60nmF8z/001-Lex-Luthor.jpg" width="200" alt="Luthor"></button>
+      <button (click)="VillainsLocal(1)"><img src="https://i.postimg.cc/Znw091Fz/002-Deathstroke.jpg" width="200" alt="Deathstroke"></button>
+      <button (click)="VillainsLocal(2)"><img src="https://i.postimg.cc/Wb66b3JQ/003b-Darkseid.jpg" width="200" alt="Darkseid"></button>
+      <button (click)="VillainsLocal(3)"><img src="https://i.postimg.cc/bvdQT9Fh/004-Trigon.png" width="200" alt="Trigon"></button>
+      <button (click)="VillainsLocal(4)"><img src="https://i.postimg.cc/P5SWYRyy/005-Lobo.jpg" width="200" alt="Lobo"></button>
+      <button (click)="VillainsLocal(5)"><img src="https://i.postimg.cc/Jzr3yLNt/006-Sinestro.jpg" width="200" alt="Sinestro"></button>
+
+      <button (click)="VillainsLocal(6)"><img src="https://i.postimg.cc/kXdzp2mZ/007-Black-Adam.jpg" width="200" alt="Black Adam"></button>
+      <button (click)="VillainsLocal(7)"><img src="https://i.postimg.cc/qBKWw89y/008-Superboy-Prime.jpg" width="200" alt="Superboy Prime"></button>
+      <button (click)="VillainsLocal(8)"><img src="https://i.postimg.cc/PfDHFLLs/015-Enchantress.jpg" width="200" alt="Enchantress"></button>
+      <button (click)="VillainsLocal(9)"><img src="https://i.postimg.cc/g2g7j4ZF/010-Anti-Monitor.jpg" width="200" alt="Anti-Monitor"></button>
+      <button (click)="VillainsLocal(10)"><img src="https://i.postimg.cc/vmDNV9r1/011-General-Zod.jpg" width="200" alt="General Zod"></button>
+      <button (click)="VillainsLocal(11)"><img src="https://i.postimg.cc/c4M2yd1J/012-Doomsday.jpg" width="200" alt="Doomsday"></button>
+
+      <button (click)="VillainsLocal(12)"><img src="https://i.postimg.cc/SRcpX50N/013-Brainiac.jpg" width="200" alt="Brainiac"></button>
+      <button (click)="VillainsLocal(13)"><img src="https://i.postimg.cc/jdQbtGQM/014-Professor-Zoom.png" width="200" alt="Professor Zoom"></button>
+      <button (click)="VillainsLocal(14)"><img src="https://i.postimg.cc/mgLqTKhy/009-Cyborg-Superman.jpg" width="200" alt="Cyborg Superman"></button>
+      <button (click)="VillainsLocal(15)"><img src="https://i.postimg.cc/sgRtLKk5/016-Joker.jpg" width="200" alt="Joker"></button>
+      <button (click)="VillainsLocal(16)"><img src="https://i.postimg.cc/wvPrQk5y/017-Killer-Frost.jpg" width="200" alt="Killer Frost"></button>
+      <button (click)="VillainsLocal(17)"><img src="https://i.postimg.cc/7P58J51J/018-King-Shark.jpg" width="200" alt="King Shark"></button>
+      
+      <button (click)="VillainsLocal(18)"><img src="https://i.postimg.cc/gkhC41TY/019-Poison-Ivy.jpg" width="200" alt="Poison Ivy"></button>
+      <button (click)="VillainsLocal(19)"><img src="https://i.postimg.cc/wMmGfsFW/020-Metallo.png" width="200" alt="Metallo"></button>
+      <button (click)="VillainsLocal(20)"><img src="https://i.postimg.cc/K8rdhBbw/021-Faora.jpg" width="200" alt="Faora"></button>
+      <button (click)="VillainsLocal(21)"><img src="https://i.postimg.cc/xTSQr0Hk/022-Man-Bat.jpg" width="200" alt="Man-Bat"></button>
+      <button (click)="VillainsLocal(22)"><img src="https://i.postimg.cc/g0gQnpnK/023-Ra-s-Al-Gul.jpg" width="200" alt="Ra's Al Ghul"></button>
+      <button (click)="VillainsLocal(23)"><img src="https://i.postimg.cc/W1NP3X5T/024-Giganta.jpg" width="200" alt="Giganta"></button>
     </div>
+
   </article>
   
   <article id = "Resultados" *ngIf="Home == false">
@@ -67,6 +99,8 @@
         <p> <span class="Subtitulo">Poder</span> : {{ resultados.powerstats.power }} </p>
         <p> <span class="Subtitulo">Velocidade</span> : {{ resultados.powerstats.speed }} </p>
         <p> <span class="Subtitulo">Força</span> : {{ resultados.powerstats.strength }} </p>
+
+        <!-- <p> {{ resultados | json }}</p> -->
       </div>
     </div>
 
