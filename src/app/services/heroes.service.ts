@@ -20,7 +20,12 @@ export class HeroesService {
 
     // return this.httpheroes.get ('https://gateway.marvel.com/v1/public/characters?ts=1&apikey='+this.api_key+'&hash='+this.hash);
     // return this.httpheroes.get ('https://superheroapi.com/api/10158614033284024/'+pesquisa);
-    return this.httpheroes.get ('https://superheroapi.com/api/10158614033284024/'+pesquisa);
+
+    //SEM PROXY
+    // return this.httpheroes.get ('https://superheroapi.com/api/10158614033284024/'+pesquisa);
+
+    //COM PROXY:
+    return this.httpheroes.get ('/api/10158614033284024/'+pesquisa);
 
   }
 

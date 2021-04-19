@@ -10,7 +10,11 @@ export class VillainsService {
 
   getVILLAINS (pesquisa){
     
-    return this.httpVillains.get ('https://superheroapi.com/api/10158614033284024/'+pesquisa);
+    //SEM PROXY
+    // return this.httpvillains.get ('https://superheroapi.com/api/10158614033284024/'+pesquisa);
+
+    //COM PROXY:
+    return this.httpVillains.get ('/api/10158614033284024/'+pesquisa);
 
   }
 

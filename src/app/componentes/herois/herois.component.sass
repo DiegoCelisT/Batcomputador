@@ -95,15 +95,15 @@ button
 button:hover
     background-image: url('../../../assets/Binary3.gif')
     background-size: 500px
-
 img
     align-self: center
     padding: 6px
-
-//Efeito de inversão de cor (IRADO!!)
+    
+//Efeito de inversão de cor e transparência (IRADO!!)
 img:hover
     -webkit-filter: invert(100%)
     filter: invert(100%)
+    opacity: 0.6
     // box-shadow: 0px 0px 25px rgb(60, 255, 0)
 
 .Voltar
@@ -113,14 +113,16 @@ img:hover
     background-size: 250px
     align-self: center
     position: fixed
-    right: 20px
-    bottom: 20px
+    right: 10px
+    bottom: 10px
     padding: 5px
     border-radius: 50%
     border-style: none
+    z-index: 100 //Com isso posso garantir que o botão não se perde quando acontece o hover das outras imagens :D
     img
         width: 60px
         padding: 0px
+        opacity: 1
 
 .Voltar:hover
     background-image: none

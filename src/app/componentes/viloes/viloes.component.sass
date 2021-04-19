@@ -33,7 +33,7 @@ div h1
         font-size: 80px
         text-align: center
         // color: white
-        -webkit-text-stroke: 1.8px black
+        -webkit-text-stroke: 2.5px black
         margin: 20px
     div
         flex-direction: row
@@ -104,6 +104,7 @@ img
 img:hover
     -webkit-filter: invert(100%)
     filter: invert(100%)
+    opacity: 0.6
     // box-shadow: 0px 0px 25px rgb(60, 255, 0)
 
 .Voltar
@@ -113,14 +114,16 @@ img:hover
     background-size: 250px
     align-self: center
     position: fixed
-    right: 20px
-    bottom: 20px
+    right: 10px
+    bottom: 10px
     padding: 5px
     border-radius: 50%
     border-style: none
+    z-index: 100
     img
         width: 60px
         padding: 0px
+        opacity: 1
 
 .Voltar:hover
     background-image: none

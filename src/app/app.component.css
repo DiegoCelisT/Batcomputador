@@ -30,7 +30,7 @@ div h1{
 
 
 footer{
-    background-image: url('/assets/Binary4.gif');
+    background-image: url('../assets/Binary4.gif');
     background-size: 110px;
     margin: 1vw 32vw 1vw 32vw;
 }
@@ -38,7 +38,7 @@ footer{
 footer a:hover{
     color: black;
     -webkit-text-stroke: 1.4px white;
-    background-image: url('/assets/Electric GIF.gif');
+    background-image: url('../assets/Electric GIF.gif');
     background-size: 330px;
 }
 

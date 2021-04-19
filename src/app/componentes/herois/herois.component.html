@@ -47,9 +47,6 @@
 
 
 <article id = "Resultados" *ngIf="Home == false">
-  <aside>
-    <button class="Voltar" id="buttonHome" type="button" (click)="limpar ()"><img src="https://i.postimg.cc/C1skG4bw/Back5.png" alt="Voltar"><a href="/#Herois"></a></button>
-  </aside>
   <h1> {{ resultados.name }} </h1>
   <div>
     <div>
@@ -75,5 +72,7 @@
   </div>
       
     <!-- <img *ngFor="let i of resultados.data" [src]="i.images.fixed_width.url"> -->
-     
+  <aside>
+    <button class="Voltar" id="buttonHome" type="button" (click)="limpar ()"><img src="https://i.postimg.cc/C1skG4bw/Back5.png" alt="Voltar"><a href="/#Herois"></a></button>
+  </aside>   
 </article>
