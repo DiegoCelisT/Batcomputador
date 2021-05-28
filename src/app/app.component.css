@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     margin: 0px;
 }
@@ -52,10 +52,16 @@ a{
     padding: 5px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 900px){
     
     div h1{
         font-size: 8vw;
         text-align: center;
+        padding: 2vw;
     }
+
+    footer{
+        margin: 1vw 1vw 1vw 1vw;
+    }
+
 }

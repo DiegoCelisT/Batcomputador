@@ -56,6 +56,7 @@ export class HeroisComponent implements OnInit {
   limpar (){
     this.resultados = [];
     this.Home = true;
+    // location.href = "#/herois"
   }
 
   ngOnInit(): void {

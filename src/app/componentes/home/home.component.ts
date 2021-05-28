@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // herois(){
+  //   location.href ="#/herois"
+  // }
+
 }
