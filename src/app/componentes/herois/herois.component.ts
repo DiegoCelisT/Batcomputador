@@ -18,6 +18,7 @@ export class HeroisComponent implements OnInit {
   HeroesLocal (valor){
     this.resultados = this.HeroesLocalServ.getHeroisLocal (valor);
     this.Home = false;
+    window.scroll(0,0); //Com isso consegui que abri-se na parte superior, mesmo estando tudo na mesma página embora se perde a posição anterior
     // console.log(this.resultados);
   }
 
@@ -56,7 +57,9 @@ export class HeroisComponent implements OnInit {
   limpar (){
     this.resultados = [];
     this.Home = true;
-    // location.href = "#/herois"
+    window.scroll(0,0);
+    // location.href = "javascript: history.go(0)"
+    // window.location.reload();
   }
 
   ngOnInit(): void {

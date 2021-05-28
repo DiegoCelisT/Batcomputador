@@ -18,6 +18,7 @@ export class ViloesComponent implements OnInit {
   VillainsLocal (valor){
     this.resultados = this.VillainLocalServ.getViloesLocal (valor);
     this.Home = false;
+    window.scroll(0,0);
   }
 
   //Consumo de API remota
@@ -33,6 +34,7 @@ export class ViloesComponent implements OnInit {
   limpar (){
     this.resultados = [];
     this.Home = true;
+    window.scroll(0,0);
   }
   
   ngOnInit(): void {
