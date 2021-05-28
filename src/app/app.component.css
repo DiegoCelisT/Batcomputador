@@ -21,10 +21,10 @@
 
 div h1{
     padding: 25px;
-    font-size: 50px;
+    font-size: 6vw;
     font-family: 'BatFont';
     text-shadow: 0.1em 0.1em 0.1em rgb(0, 0, 0);
-    background-image: url('../assets/Electric GIF.gif');
+    /* background-image: url('../assets/Electric GIF.gif'); */
     background-size: 170px;
 }
 
